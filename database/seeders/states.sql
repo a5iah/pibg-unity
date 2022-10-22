@@ -1,0 +1,17 @@
+INSERT INTO `pskm`.`states` (`iso_code`, `country_alpha3`, `subdivision`, `name`) VALUES
+('MY-01','MYS','state','Johor'),
+('MY-02','MYS','state','Kedah'),
+('MY-03','MYS','state','Kelantan'),
+('MY-04','MYS','state','Melaka'),
+('MY-05','MYS','state','Negeri Sembilan'),
+('MY-06','MYS','state','Pahang'),
+('MY-07','MYS','state','Perak'),
+('MY-08','MYS','state','Perlis'),
+('MY-09','MYS','state','Pulau Pinang'),
+('MY-10','MYS','state','Sabah'),
+('MY-11','MYS','state','Sarawak'),
+('MY-12','MYS','state','Selangor'),
+('MY-13','MYS','state','Terengganu'),
+('MY-14','MYS','federal territory','Wilayah Persekutuan Kuala Lumpur'),
+('MY-15','MYS','federal territory','Wilayah Persekutuan Labuan'),
+('MY-16','MYS','federal territory','Wilayah Persekutuan Putrajaya');
