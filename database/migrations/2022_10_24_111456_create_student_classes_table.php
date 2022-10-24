@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('student_classes', function (Blueprint $table) {
-            $table->foreignUlid('student_id')
+            $table->foreignId('student_id')
                 ->constrained('students')
                 ->onUpdate('cascade')
                 ->onDelete('restrict');

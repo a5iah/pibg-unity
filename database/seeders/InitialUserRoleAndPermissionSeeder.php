@@ -45,6 +45,5 @@ class InitialUserRoleAndPermissionSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
         $superAdmin->assignRole('Super Admin');
-
     }
 }
