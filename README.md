@@ -2,11 +2,16 @@
 
 PIBG Management System - From PIBG, For PIBG, By PIBG
 
+## Design Parameters
+- by default multi-tenant system
+- Role Based Access Control
+
 ## Modules
 - Security
 - User and Role Management
 - Member Management
 - Communication Management
+- Transport Management
 - Event Management
 - Budget Management
 - Procurement Management

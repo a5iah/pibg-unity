@@ -28,6 +28,11 @@ class DatabaseSeeder extends Seeder
             SchoolSeeder::class,
             PibgSeeder::class,
 
+            // Trip Module
+            TripModuleRoleAndPermissionSeeder::class,
+            TripGroupSeeder::class,
+            TripSeeder::class,
+
             // SQL Dump seeder
             SQLDumpSeeder::class,
         ]);
