@@ -25,8 +25,20 @@ class DatabaseSeeder extends Seeder
             PersonTitleSeeder::class,
             IcTypeSeeder::class,
             PersonSeeder::class,
+            RelationshipSeeder::class,
+
+            // School Module
             SchoolSeeder::class,
+            ClassLevelSeeder::class,
+            ClassroomSeeder::class,
+            StudentSeeder::class,
+            GuardianSeeder::class,
+
+
+            // PIBG Module
             PibgSeeder::class,
+            PibgMemberSeeder::class,
+            PibgCommitteeSeeder::class,
 
             // Trip Module
             TripModuleRoleAndPermissionSeeder::class,

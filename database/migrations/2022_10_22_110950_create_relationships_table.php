@@ -13,9 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('class_rooms', function (Blueprint $table) {
-            $table->id();
+        Schema::create('relationships', function (Blueprint $table) {
+            $table->char('id', 3)->primary();
+            $table->string('name', 32);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('class_rooms');
+        Schema::dropIfExists('relationships');
     }
 };

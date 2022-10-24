@@ -14,15 +14,15 @@ return new class extends Migration
     public function up()
     {
         Schema::create('countries', function (Blueprint $table) {
-            $table->char('alpha3', 3);
+            $table->char('alpha3', 3)->primary();
             $table->char('alpha2', 2);
             $table->string('name', 255);
             $table->integer('phone_code',false,true);
             $table->string('currency_symbol', 8);
             $table->char('currency_code', 3);
             $table->timestamps();
+            $table->softDeletes();
 
-            $table->primary('alpha3');
             $table->unique('alpha2', 'uidx_countries_alpha2');
         });
     }

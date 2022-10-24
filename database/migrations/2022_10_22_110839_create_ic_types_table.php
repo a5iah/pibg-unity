@@ -14,12 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('ic_types', function (Blueprint $table) {
-            $table->char('id', 4);
+            $table->char('id', 4)->primary();
             $table->string('name', 64);
             $table->char('country_alpha3', 3);
             $table->timestamps();
+            $table->softDeletes();
 
-            $table->primary('id');
             $table->foreign('country_alpha3')
                 ->references('alpha3')
                 ->on('countries')

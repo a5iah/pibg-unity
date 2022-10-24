@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('pibg_committees', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

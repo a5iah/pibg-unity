@@ -14,8 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('class_levels', function (Blueprint $table) {
-            $table->id();
+            $table->char('id', 3)->primary();
+            $table->string('name', 32);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

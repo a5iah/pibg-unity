@@ -15,9 +15,10 @@ class School extends Model
      * @var string[]
      */
     protected $fillable = [
-        'code',
+        'id',
         'name',
         'phone',
+        'fax',
         'email',
         'address1',
         'address2',

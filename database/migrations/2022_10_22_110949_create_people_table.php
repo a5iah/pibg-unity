@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('address2', 255);
             $table->string('address3', 255);
             $table->string('city', 255);
+            $table->string('postcode', 16);
             $table->string('state_iso_code', 6);
             $table->string('country_alpha3', 3);
             $table->foreignId('user_id')
@@ -37,6 +38,7 @@ return new class extends Migration
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
             $table->timestamps();
+            $table->softDeletes();
 
             $table->foreign('ic_type_id')
                 ->references('id')
@@ -53,6 +55,7 @@ return new class extends Migration
                 ->on('countries')
                 ->cascadeOnUpdate()
                 ->restrictOnDelete();
+            $table->index(['ic_no', 'ic_type_id']);
         });
     }
 

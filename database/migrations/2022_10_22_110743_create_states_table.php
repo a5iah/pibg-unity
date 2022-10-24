@@ -14,13 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('states', function (Blueprint $table) {
-            $table->char('iso_code', 6);
+            $table->char('iso_code', 6)->primary();
             $table->char('country_alpha3', 3);
             $table->string('subdivision',32);
             $table->string('name',255);
             $table->timestamps();
+            $table->softDeletes();
 
-            $table->primary('iso_code');
             $table->foreign('country_alpha3')
                 ->references('alpha3')
                 ->on('countries')

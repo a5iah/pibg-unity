@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('fullcite', 64);
             $table->string('shortcite', 64);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

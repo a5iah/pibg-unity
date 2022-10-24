@@ -15,9 +15,11 @@ class Pibg extends Model
      * @var string[]
      */
     protected $fillable = [
+        'id',
         'name',
         'school_code',
         'phone',
+        'fax',
         'email',
         'address1',
         'address2',
