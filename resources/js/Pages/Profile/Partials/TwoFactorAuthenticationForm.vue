@@ -1,7 +1,6 @@
 <script setup>
 import { ref, computed, watch } from 'vue';
-import { Inertia } from '@inertiajs/inertia';
-import { useForm, usePage } from '@inertiajs/inertia-vue3';
+import { router, useForm, usePage } from '@inertiajs/vue3';
 import ActionSection from '@/Components/ActionSection.vue';
 import ConfirmsPassword from '@/Components/ConfirmsPassword.vue';
 import DangerButton from '@/Components/DangerButton.vue';
@@ -27,7 +26,7 @@ const confirmationForm = useForm({
 });
 
 const twoFactorEnabled = computed(
-    () => ! enabling.value && usePage().props.value.user?.two_factor_enabled,
+    () => ! enabling.value && usePage().props.auth.user?.two_factor_enabled,
 );
 
 watch(twoFactorEnabled, () => {
@@ -40,7 +39,7 @@ watch(twoFactorEnabled, () => {
 const enableTwoFactorAuthentication = () => {
     enabling.value = true;
 
-    Inertia.post('/user/two-factor-authentication', {}, {
+    router.post(route('two-factor.enable'), {}, {
         preserveScroll: true,
         onSuccess: () => Promise.all([
             showQrCode(),
@@ -55,25 +54,25 @@ const enableTwoFactorAuthentication = () => {
 };
 
 const showQrCode = () => {
-    return axios.get('/user/two-factor-qr-code').then(response => {
+    return axios.get(route('two-factor.qr-code')).then(response => {
         qrCode.value = response.data.svg;
     });
 };
 
 const showSetupKey = () => {
-    return axios.get('/user/two-factor-secret-key').then(response => {
+    return axios.get(route('two-factor.secret-key')).then(response => {
         setupKey.value = response.data.secretKey;
     });
 }
 
 const showRecoveryCodes = () => {
-    return axios.get('/user/two-factor-recovery-codes').then(response => {
+    return axios.get(route('two-factor.recovery-codes')).then(response => {
         recoveryCodes.value = response.data;
     });
 };
 
 const confirmTwoFactorAuthentication = () => {
-    confirmationForm.post('/user/confirmed-two-factor-authentication', {
+    confirmationForm.post(route('two-factor.confirm'), {
         errorBag: "confirmTwoFactorAuthentication",
         preserveScroll: true,
         preserveState: true,
@@ -87,14 +86,14 @@ const confirmTwoFactorAuthentication = () => {
 
 const regenerateRecoveryCodes = () => {
     axios
-        .post('/user/two-factor-recovery-codes')
+        .post(route('two-factor.recovery-codes'))
         .then(() => showRecoveryCodes());
 };
 
 const disableTwoFactorAuthentication = () => {
     disabling.value = true;
 
-    Inertia.delete('/user/two-factor-authentication', {
+    router.delete(route('two-factor.disable'), {
         preserveScroll: true,
         onSuccess: () => {
             disabling.value = false;
@@ -145,9 +144,9 @@ const disableTwoFactorAuthentication = () => {
                         </p>
                     </div>
 
-                    <div class="mt-4" v-html="qrCode" />
+                    <div class="mt-4 p-2 inline-block bg-white" v-html="qrCode" />
 
-                    <div class="mt-4 max-w-xl text-sm text-gray-600" v-if="setupKey">
+                    <div v-if="setupKey" class="mt-4 max-w-xl text-sm text-gray-600">
                         <p class="font-semibold">
                             Setup Key: <span v-html="setupKey"></span>
                         </p>
