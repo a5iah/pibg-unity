@@ -14,12 +14,12 @@ class DemoSeeder extends Seeder
         $this->call([
             SchoolDemoSeeder::class,
             ClassroomDemoSeeder::class,
-            PersonDemoSeeder::class,
-            UserDemoSeeder::class,
-            StudentDemoSeeder::class,
-            SubjectDemoSeeder::class,
-            ExamDemoSeeder::class,
-            ExamResultDemoSeeder::class,
+            // PersonDemoSeeder::class,
+            // UserDemoSeeder::class,
+            // StudentDemoSeeder::class,
+            // SubjectDemoSeeder::class,
+            // ExamDemoSeeder::class,
+            // ExamResultDemoSeeder::class,
         ]);
     }
 }
