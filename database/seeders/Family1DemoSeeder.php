@@ -68,14 +68,14 @@ class Family1DemoSeeder extends Seeder
             'user_id' => $parentf1i->id,
         ]);
 
-        //anakf1c1
+        //anakf1c1 -school1
         $anakf1c1 = Person::firstOrCreate([
-            'forename' => 'Melati',
+            'forename' => 'Fatihah',
             'surname' => 'Ramli',
-            'title_id' => 2,
-            'ic_no' => '700101-01-0102',
+            'title_id' => 3,
+            'ic_no' => '080818-01-1818',
             'ic_type_id' => 'MY01',
-            'phone' => '0123456789',
+            'phone' => '0112345678',
             'email' => 'anakf1c1@email.faux',
             'address1' => 'No 2, Jalan Dedap 2',
             'address2' => 'Saujana Utama 2',
@@ -86,6 +86,22 @@ class Family1DemoSeeder extends Seeder
             'country_alpha3' => 'MYS',
         ]);
 
-        //anakf1c2
+        //anakf1c2 -school2
+         $anakf1c2 = Person::firstOrCreate([
+            'forename' => 'Sarah',
+            'surname' => 'Ramli',
+            'title_id' => 3,
+            'ic_no' => '130303-01-0130',
+            'ic_type_id' => 'MY01',
+            'phone' => '0112345678',
+            'email' => 'anakf1c1@email.faux',
+            'address1' => 'No 2, Jalan Dedap 2',
+            'address2' => 'Saujana Utama 2',
+            'address3' => 'Bandar Saujana Utama',
+            'city' => 'Sungai Buloh',
+            'postcode' => '47000',
+            'state_iso_code' => 'MY-12',
+            'country_alpha3' => 'MYS',
+        ]);
     }
 }
