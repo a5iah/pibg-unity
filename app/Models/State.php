@@ -9,6 +9,16 @@ class State extends Model
 {
     use HasFactory;
 
+    // not using auto-incrementing primary key
+    public $incrementing = false;
+
+    /**
+     * The primary key associated with the table.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'iso_code';
+
     /**
      * The attributes that are mass assignable.
      *

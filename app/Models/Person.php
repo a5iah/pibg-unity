@@ -21,6 +21,7 @@ class Person extends Model
         'ic_no',
         'ic_type',
         'phone',
+        'fax',
         'email',
         'address1',
         'address2',

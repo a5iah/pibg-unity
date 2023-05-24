@@ -24,10 +24,11 @@ return new class extends Migration
             $table->string('ic_no', 32);
             $table->char('ic_type_id', 4);
             $table->string('phone', 32);
+            $table->string('fax', 32)->nullable();
             $table->string('email', 255);
             $table->string('address1', 255);
-            $table->string('address2', 255);
-            $table->string('address3', 255);
+            $table->string('address2', 255)->nullable();
+            $table->string('address3', 255)->nullable();
             $table->string('city', 255);
             $table->string('postcode', 16);
             $table->string('state_iso_code', 6);
