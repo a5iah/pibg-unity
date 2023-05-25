@@ -22,7 +22,7 @@ class Family1DemoSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
 
-        //Parent F1A
+        //parentf1a
         Person::firstOrCreate([
             'forename' => 'Ramli',
             'surname' => 'Sarip',
@@ -49,7 +49,7 @@ class Family1DemoSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
 
-        //parent F1I
+        //parentf1i
         Person::firstOrCreate([
             'forename' => 'Aminah',
             'surname' => 'Abu',
@@ -58,7 +58,7 @@ class Family1DemoSeeder extends Seeder
             'ic_type_id' => 'MY01',
             'phone' => '0123456789',
             'email' => 'parentf1i@email.faux',
-            'address1' => 'No 2, Jalan Dedap 2',
+            'address1' => 'No 1, Jalan Dedap 1',
             'address2' => 'Saujana Utama 2',
             'address3' => 'Bandar Saujana Utama',
             'city' => 'Sungai Buloh',
@@ -77,7 +77,7 @@ class Family1DemoSeeder extends Seeder
             'ic_type_id' => 'MY01',
             'phone' => '0112345678',
             'email' => 'anakf1c1@email.faux',
-            'address1' => 'No 2, Jalan Dedap 2',
+            'address1' => 'No 1, Jalan Dedap 1',
             'address2' => 'Saujana Utama 2',
             'address3' => 'Bandar Saujana Utama',
             'city' => 'Sungai Buloh',
@@ -95,7 +95,7 @@ class Family1DemoSeeder extends Seeder
             'ic_type_id' => 'MY01',
             'phone' => '0112345678',
             'email' => 'anakf1c2@email.faux',
-            'address1' => 'No 2, Jalan Dedap 2',
+            'address1' => 'No 1, Jalan Dedap 1',
             'address2' => 'Saujana Utama 2',
             'address3' => 'Bandar Saujana Utama',
             'city' => 'Sungai Buloh',

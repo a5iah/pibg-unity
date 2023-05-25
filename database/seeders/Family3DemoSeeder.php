@@ -31,7 +31,7 @@ class Family3DemoSeeder extends Seeder
             'ic_type_id' => 'MY01',
             'phone' => '0123456789',
             'email' => 'parentf3a@email.faux',
-            'address1' => 'No 5, Jalan Dedap 5',
+            'address1' => 'No 3, Jalan Dedap 3',
             'address2' => 'Saujana Utama 2',
             'address3' => 'Bandar Saujana Utama',
             'city' => 'Sungai Buloh',
@@ -52,13 +52,13 @@ class Family3DemoSeeder extends Seeder
         //parentf3i
         Person::firstOrCreate([
             'forename' => 'Kamariah',
-            'surname' => 'Dahalan',
+            'surname' => 'Dahlan',
             'title_id' => 46,
             'ic_no' => '700101-01-0106',
             'ic_type_id' => 'MY01',
             'phone' => '0123456789',
             'email' => 'parentf3i@email.faux',
-            'address1' => 'No 6, Jalan Dedap 6',
+            'address1' => 'No 3, Jalan Dedap 3',
             'address2' => 'Saujana Utama 2',
             'address3' => 'Bandar Saujana Utama',
             'city' => 'Sungai Buloh',
@@ -68,16 +68,16 @@ class Family3DemoSeeder extends Seeder
             'user_id' => $parentf3i->id,
         ]);
 
-        //anakf3c1 -school1
-        Person::firstOfCreate([
+        //anakf3c1 -school2
+        Person::firstOrCreate([
             'forename' => 'Ali',
             'surname' => 'Kasim',
             'title_id' => 1,
-            'ic_no' => '070707-01-0707',
+            'ic_no' => '110101-01-0101',
             'ic_type_id' => 'MY01',
             'phone' => '0112345678',
             'email' => 'anakf3c1@email.faux',
-            'address1' => 'No 6, Jalan Dedap 6',
+            'address1' => 'No 3, Jalan Dedap 3',
             'address2' => 'Saujana Utama 2',
             'address3' => 'Bandar Saujana Utama',
             'city' => 'Sungai Buloh',
