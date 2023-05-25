@@ -76,7 +76,7 @@ class Family3DemoSeeder extends Seeder
             'ic_no' => '070707-01-0707',
             'ic_type_id' => 'MY01',
             'phone' => '0112345678',
-            'email' => 'parentf3i@email.faux',
+            'email' => 'anakf3c1@email.faux',
             'address1' => 'No 6, Jalan Dedap 6',
             'address2' => 'Saujana Utama 2',
             'address3' => 'Bandar Saujana Utama',
