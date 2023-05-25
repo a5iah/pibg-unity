@@ -9,6 +9,16 @@ class Pibg extends Model
 {
     use HasFactory;
 
+    // not using auto-incrementing primary key
+    public $incrementing = false;
+
+    /**
+     * The primary key associated with the table.
+     *
+     * @var string
+     */
+    protected $primaryKey = 'id';
+
     /**
      * The attributes that are mass assignable.
      *
