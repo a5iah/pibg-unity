@@ -76,7 +76,7 @@ class Family2DemoSeeder extends Seeder
             'ic_no' => '110101-01-0104',
             'ic_type_id' => 'MY01',
             'phone' => '0112345678',
-            'email' => 'parentf2i@email.faux',
+            'email' => 'anakf2c1@email.faux',
             'address1' => 'No 4, Jalan Dedap 4',
             'address2' => 'Saujana Utama 2',
             'address3' => 'Bandar Saujana Utama',
