@@ -56,7 +56,7 @@ return new class extends Migration
                 ->on('countries')
                 ->cascadeOnUpdate()
                 ->restrictOnDelete();
-            $table->index(['ic_no', 'ic_type_id']);
+            $table->unique(['ic_no', 'ic_type_id']);
         });
     }
 
