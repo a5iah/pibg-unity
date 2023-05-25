@@ -67,5 +67,23 @@ class Family3DemoSeeder extends Seeder
             'country_alpha3' => 'MYS',
             'user_id' => $parentf3i->id,
         ]);
+
+        //anakf3c1 -school1
+        Person::firstOfCreate([
+            'forename' => 'Ali',
+            'surname' => 'Kasim',
+            'title_id' => 1,
+            'ic_no' => '070707-01-0707',
+            'ic_type_id' => 'MY01',
+            'phone' => '0112345678',
+            'email' => 'anakf3c1@email.faux',
+            'address1' => 'No 6, Jalan Dedap 6',
+            'address2' => 'Saujana Utama 2',
+            'address3' => 'Bandar Saujana Utama',
+            'city' => 'Sungai Buloh',
+            'postcode' => '47000',
+            'state_iso_code' => 'MY-12',
+            'country_alpha3' => 'MYS',
+        ]);
     }
 }
