@@ -73,7 +73,7 @@ class Family2DemoSeeder extends Seeder
             'forename' => 'Ain',
             'surname' => 'Karim',
             'title_id' => 3,
-            'ic_no' => '110101-01-0104',
+            'ic_no' => '110101-01-0102',
             'ic_type_id' => 'MY01',
             'phone' => '0112345678',
             'email' => 'anakf2c1@email.faux',

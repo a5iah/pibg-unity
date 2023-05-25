@@ -22,7 +22,7 @@ class Family1DemoSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
 
-        //Parent F1A
+        //parentf1a
         Person::firstOrCreate([
             'forename' => 'Ramli',
             'surname' => 'Sarip',
@@ -49,7 +49,7 @@ class Family1DemoSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
 
-        //parent F1I
+        //parentf1i
         Person::firstOrCreate([
             'forename' => 'Aminah',
             'surname' => 'Abu',

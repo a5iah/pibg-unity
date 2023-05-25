@@ -14,7 +14,7 @@ class Family3DemoSeeder extends Seeder
      */
     public function run(): void
     {
-        //user parentf2a
+        //user parentf3a
         $parentf3a = User::firstOrCreate([
             'name' => 'parentf3a',
             'email' => 'parentf3a@email.faux',
@@ -22,12 +22,12 @@ class Family3DemoSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
 
-        //parentf2a
+        //parentf3a
         Person::firstOrCreate([
             'forename' => 'Kasim',
             'surname' => 'Selamat',
             'title_id' => 26,
-            'ic_no' => '700101-01-0103',
+            'ic_no' => '700101-01-0105',
             'ic_type_id' => 'MY01',
             'phone' => '0123456789',
             'email' => 'parentf3a@email.faux',
@@ -41,7 +41,7 @@ class Family3DemoSeeder extends Seeder
             'user_id' => $parentf3a->id,
         ]);
 
-        //user parentf2i
+        //user parentf3i
         $parentf3i = User::firstOrCreate([
             'name' => 'parentf3i',
             'email' => 'parentf3i@email.faux',
@@ -49,12 +49,12 @@ class Family3DemoSeeder extends Seeder
             'email_verified_at' => now(),
         ]);
 
-        //parentf2i
+        //parentf3i
         Person::firstOrCreate([
             'forename' => 'Kamariah',
             'surname' => 'Dahlan',
             'title_id' => 46,
-            'ic_no' => '700101-01-0104',
+            'ic_no' => '700101-01-0106',
             'ic_type_id' => 'MY01',
             'phone' => '0123456789',
             'email' => 'parentf3i@email.faux',
@@ -68,12 +68,12 @@ class Family3DemoSeeder extends Seeder
             'user_id' => $parentf3i->id,
         ]);
 
-        //anakf2c1 -school2
+        //anakf3c1 -school2
         Person::firstOrCreate([
             'forename' => 'Ali',
             'surname' => 'Kasim',
             'title_id' => 1,
-            'ic_no' => '110101-01-0104',
+            'ic_no' => '110101-01-0101',
             'ic_type_id' => 'MY01',
             'phone' => '0112345678',
             'email' => 'anakf3c1@email.faux',
